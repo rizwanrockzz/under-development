@@ -1,5 +1,16 @@
 @import url("https://fonts.googleapis.com/css2?family=Baloo+Bhai+2:wght@400;500;600;700;800&family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
 
+:root {
+  --gradientColorZero: #a960ee;
+  --gradientColorOne: #ff333d;
+  --gradientColorTwo: #90e0ff;
+  --gradientColorThree: #ffcb57;
+  --gradientColorZeroTransparent: rgba(169, 96, 238, 0);
+  --gradientColorOneTransparent: rgba(255, 51, 61, 0);
+  --gradientColorTwoTransparent: rgba(144, 224, 255, 0);
+  --gradientColorThreeTransparent: rgba(255, 203, 87, 0);
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -53,6 +64,7 @@ li a {
 }
 
 .gradient-block {
+  opacity: 0.9;
   width: 100%;
   height: 420px;
   /* background: #40e0d0;
@@ -64,17 +76,43 @@ li a {
   top: 0;
   z-index: -1;
 
-  background-color: rgb(168, 85, 247);
-  background-image: radial-gradient(
-      at 31% 7%,
-      rgb(127, 29, 29) 0,
-      transparent 56%
-    ),
-    radial-gradient(at 81% 32%, rgb(16, 185, 129) 0, transparent 8%),
-    radial-gradient(at 65% 85%, rgb(134, 239, 172) 0, transparent 43%),
-    radial-gradient(at 71% 89%, rgb(17, 24, 39) 0, transparent 69%),
-    radial-gradient(at 70% 78%, rgb(168, 162, 158) 0, transparent 47%),
-    radial-gradient(at 31% 77%, rgb(115, 115, 115) 0, transparent 58%);
+  background: radial-gradient(
+        var(--gradientColorThree) 23%,
+        var(--gradientColorThreeTransparent) 67% 100%
+      )
+      385px -24px,
+    radial-gradient(
+        var(--gradientColorOne) 0,
+        var(--gradientColorOneTransparent) 60% 100%
+      ) -940px 290px,
+    radial-gradient(
+        var(--gradientColorTwo) 10%,
+        var(--gradientColorTwoTransparent) 60% 100%
+      ) -120px 250px,
+    radial-gradient(
+        var(--gradientColorOne) 40%,
+        var(--gradientColorOneTransparent) 57% 100%
+      )
+      495px -44px,
+    radial-gradient(
+        var(--gradientColorZero) 30%,
+        var(--gradientColorZeroTransparent) 67% 100%
+      )
+      122px -120px,
+    radial-gradient(
+        var(--gradientColorZero) 10%,
+        var(--gradientColorZeroTransparent) 60% 100%
+      ) -420px 120px,
+    radial-gradient(
+        var(--gradientColorTwo) 15%,
+        var(--gradientColorTwoTransparent) 50% 100%
+      ) -620px 0,
+    radial-gradient(
+        var(--gradientColorTwo) 25%,
+        var(--gradientColorTwoTransparent) 50% 100%
+      )
+      520px -250px,
+    var(--gradientColorZero);
 }
 
 @media only screen and (max-width: 600px) {
@@ -82,3 +120,67 @@ li a {
     display: none;
   }
 }
+
+/*
+@media (min-width: 600px) {
+  .Gradient:after {
+    background: radial-gradient(
+          var(--gradientColorZero) 40%,
+          var(--gradientColorTwoTransparent) 60%
+        ) -420px -180px no-repeat,
+      radial-gradient(
+          var(--gradientColorThree) 23%,
+          var(--gradientColorThreeTransparent) 70%
+        )
+        240px -24px no-repeat,
+      radial-gradient(
+          var(--gradientColorTwo) 30%,
+          var(--gradientColorTwoTransparent) 70%
+        ) -270px 220px no-repeat,
+      var(--gradientColorZero);
+  }
+}
+@media (min-width: 900px) {
+  .Gradient:after {
+    background: radial-gradient(
+          var(--gradientColorThree) 23%,
+          var(--gradientColorThreeTransparent) 67% 100%
+        )
+        385px -24px,
+      radial-gradient(
+          var(--gradientColorOne) 0,
+          var(--gradientColorOneTransparent) 60% 100%
+        ) -940px 290px,
+      radial-gradient(
+          var(--gradientColorTwo) 10%,
+          var(--gradientColorTwoTransparent) 60% 100%
+        ) -120px 250px,
+      radial-gradient(
+          var(--gradientColorOne) 40%,
+          var(--gradientColorOneTransparent) 57% 100%
+        )
+        495px -44px,
+      radial-gradient(
+          var(--gradientColorZero) 30%,
+          var(--gradientColorZeroTransparent) 67% 100%
+        )
+        122px -120px,
+      radial-gradient(
+          var(--gradientColorZero) 10%,
+          var(--gradientColorZeroTransparent) 60% 100%
+        ) -420px 120px,
+      radial-gradient(
+          var(--gradientColorTwo) 15%,
+          var(--gradientColorTwoTransparent) 50% 100%
+        ) -620px 0,
+      radial-gradient(
+          var(--gradientColorTwo) 25%,
+          var(--gradientColorTwoTransparent) 50% 100%
+        )
+        520px -250px,
+      var(--gradientColorZero);
+    background-repeat: repeat-y;
+  }
+}
+
+*/
