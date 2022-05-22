@@ -1,0 +1,84 @@
+@import url("https://fonts.googleapis.com/css2?family=Baloo+Bhai+2:wght@400;500;600;700;800&family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  /* font-family: 'Baloo Bhai 2', cursive; */
+  /* background: black; */
+}
+
+/* Navbar */
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  margin-top: 15px;
+}
+
+.navcol-1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.navcol-1 a {
+  margin: 0;
+  padding: 0;
+}
+
+.navcol-1 p {
+  font-size: 20px;
+  color: white;
+}
+
+.navcol-1 img {
+  width: 40px;
+  margin-right: 15px;
+}
+
+ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  list-style-type: none;
+}
+
+li a {
+  text-decoration: none;
+  color: white;
+  padding: 0 20px;
+}
+
+.gradient-block {
+  width: 100%;
+  height: 420px;
+  /* background: #40e0d0;
+  background: linear-gradient(to left, #ff0080, #ff8c00, #40e0d0); */
+
+  transform: skewY(-12deg);
+  position: absolute;
+  transform-origin: 0;
+  top: 0;
+  z-index: -1;
+
+  background-color: rgb(168, 85, 247);
+  background-image: radial-gradient(
+      at 31% 7%,
+      rgb(127, 29, 29) 0,
+      transparent 56%
+    ),
+    radial-gradient(at 81% 32%, rgb(16, 185, 129) 0, transparent 8%),
+    radial-gradient(at 65% 85%, rgb(134, 239, 172) 0, transparent 43%),
+    radial-gradient(at 71% 89%, rgb(17, 24, 39) 0, transparent 69%),
+    radial-gradient(at 70% 78%, rgb(168, 162, 158) 0, transparent 47%),
+    radial-gradient(at 31% 77%, rgb(115, 115, 115) 0, transparent 58%);
+}
+
+@media only screen and (max-width: 600px) {
+  .navcol-2 {
+    display: none;
+  }
+}
