@@ -7,7 +7,7 @@ function Pixel(x, y) {
     this.y = y;
     this.hue = Math.floor(Math.random() * 360);
     var direction = Math.random() > 0.5 ? -1 : 1;
-    this.velocity = (Math.random() * 20+30 ) * 0.01 * direction;
+    this.velocity = (Math.random() * 20 + 30) * 0.01 * direction;
 }
 
 Pixel.prototype.update = function () {
@@ -35,5 +35,5 @@ function animate() {
     requestAnimationFrame(animate);
 }
 
-animate();
+setTimeout(animate(), 5000);
 
