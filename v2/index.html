@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png" />
+    <link rel="stylesheet" href="css/style.css" />
+    <title>Simulated Virtual Solutions</title>
+</head>
+
+<body>
+    <!-- Navbar -->
+
+    <header>
+        <div class="navcol-1">
+            <!-- <a href="index.html" class="main-logo-link"><img src="images/logo.png" alt="svs main logo" /></a> -->
+            <img src="images/logo-white.png" alt="svs main logo" />
+            <p>Simulated Virtual Solutions</p>
+        </div>
+        <div class="navcol-2">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Works</a></li>
+                <li><a href="#">Expertise</a></li>
+                <li><a href="#">Pricing</a></li>
+                <li><a href="#">About</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <canvas id="gradient-block" class="gradient-block" width="2" height="2"></canvas>
+    <!-- <div class="gradient-block">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+    </div> -->
+    <script >
+        var canvas = document.getElementById('gradient-block');
+        var ctx = canvas.getContext('2d');
+
+
+        function Pixel(x, y) {
+            this.x = x;
+            this.y = y;
+            this.hue = Math.floor(Math.random() * 360);
+            var direction = Math.random() > 0.5 ? -1 : 1;
+            this.velocity = (Math.random() * 20 + 30) * 0.01 * direction;
+        }
+
+        Pixel.prototype.update = function () {
+            this.hue += this.velocity;
+        };
+
+        Pixel.prototype.render = function (ctx) {
+            var hue = Math.round(this.hue);
+            ctx.fillStyle = 'hsl(' + hue + ', 100%, 50% )';
+            ctx.fillRect(this.x, this.y, 1, 1);
+        }
+
+        var pixels = [
+            new Pixel(0, 0),
+            new Pixel(1, 0),
+            new Pixel(0, 1),
+            new Pixel(1, 1),
+        ];
+
+        function animate() {
+            pixels.forEach(function (pixel) {
+                pixel.update();
+                pixel.render(ctx);
+            });
+            requestAnimationFrame(animate);
+        }
+
+        setTimeout(animate(), 5000);
+
+
+    </script>
+</body>
+
+</html>
