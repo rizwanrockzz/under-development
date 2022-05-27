@@ -18,8 +18,9 @@
     <header>
         <div class="navcol-1">
             <!-- <a href="index.html" class="main-logo-link"><img src="images/logo.png" alt="svs main logo" /></a> -->
-            <img src="images/logo-white.png" alt="svs main logo" />
-            <p>Simulated Virtual Solutions</p>
+            <img src="images/main-logo-white-removebg-preview.png" alt="svs main logo" />
+
+            <!-- <p>Simulated Virtual Solutions</p> -->
         </div>
         <div class="navcol-2">
             <ul>
@@ -32,55 +33,57 @@
         </div>
     </header>
 
-    <canvas id="gradient-block" class="gradient-block" width="2" height="2"></canvas>
+    <canvas id="canvas" class="gradient-block" width="2" height="2"></canvas>
     <!-- <div class="gradient-block">
         <span></span>
         <span></span>
         <span></span>
         <span></span>
     </div> -->
-    <script >
-        var canvas = document.getElementById('gradient-block');
-        var ctx = canvas.getContext('2d');
+
+    <section class="main-hero">
 
 
-        function Pixel(x, y) {
-            this.x = x;
-            this.y = y;
-            this.hue = Math.floor(Math.random() * 360);
-            var direction = Math.random() > 0.5 ? -1 : 1;
-            this.velocity = (Math.random() * 20 + 30) * 0.01 * direction;
-        }
+        <!-- <section class="hero-section"> -->
+        <div class="text-ar align-center">
+            <h3>Architectural Visualization using Virtual Reality</h3>
+        </div>
 
-        Pixel.prototype.update = function () {
-            this.hue += this.velocity;
-        };
+        <div class="img-pic align-center">
+            <img class="hero-pic" src="images/main-pic.png" alt="main-vr">
 
-        Pixel.prototype.render = function (ctx) {
-            var hue = Math.round(this.hue);
-            ctx.fillStyle = 'hsl(' + hue + ', 100%, 50% )';
-            ctx.fillRect(this.x, this.y, 1, 1);
-        }
-
-        var pixels = [
-            new Pixel(0, 0),
-            new Pixel(1, 0),
-            new Pixel(0, 1),
-            new Pixel(1, 1),
-        ];
-
-        function animate() {
-            pixels.forEach(function (pixel) {
-                pixel.update();
-                pixel.render(ctx);
-            });
-            requestAnimationFrame(animate);
-        }
-
-        setTimeout(animate(), 5000);
+        </div>
 
 
-    </script>
+        <!-- </section> -->
+
+    </section>
+
+    <!-- Works Section -->
+
+    <div class="works">
+        <h2>Our Designs</h2>
+        <h2><strong class="stylish-underline">Recently</strong> Worked Projects</h2>
+    </div>
+
+    <!-- Video Section -->
+
+    <div class="vid-text-grid">
+        <div class="video-section block-center">
+            <video muted loop infinite autoplay>
+                <source src="videos/hall.mp4" type="video/mp4">
+            </video>
+        </div>
+        <div class="vid-desc block-center">
+            <h2>hall design</h2>
+            <p>A house is made of<span class="gradient-txt"> walls and beams</span> a home is built of love and dreams
+            </p>
+
+        </div>
+    </div>
+
+
 </body>
+<script src="js/animate.js"></script>
 
 </html>
