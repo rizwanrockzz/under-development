@@ -287,8 +287,48 @@ li a {
   background: #fc466b;
   background: -webkit-linear-gradient(to left, #3f5efb, #fc466b);
   background: linear-gradient(to left, #3f5efb, #fc466b);
-
   -webkit-text-fill-color: transparent;
   -webkit-background-clip: text;
   font-weight: 600;
+}
+
+/* branding */
+
+.branding {
+  text-transform: uppercase;
+  text-align: center;
+  font-size: 50px;
+  background: url(../images/gradient.gif);
+  background-size: cover;
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  margin-top: 15%;
+  margin-bottom: 5%;
+}
+
+.branding-background {
+  width: 100%;
+  background: black;
+  height: 100%;
+}
+
+/* footer */
+
+.footer-line{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 6%;
+}
+
+.footer-line p{
+  font-size: 1.35em;
+}
+
+.love-img img,
+.india-img img {
+  width: 20px;
+  margin-top: 5px;
+  margin: 0 6px;
+  padding-top: 4px;
 }
