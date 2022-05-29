@@ -74,14 +74,14 @@ header {
   margin-right: 15px;
 }
 
-ul {
+.navcol-2 ul {
   display: flex;
   justify-content: center;
   align-items: center;
   list-style-type: none;
 }
 
-li a {
+.navcol-2 li a {
   text-decoration: none;
   color: white;
   padding: 0 20px;
@@ -375,7 +375,7 @@ li a {
 .branding {
   text-transform: uppercase;
   text-align: center;
-  font-size: 50px;
+  font-size: 40px;
   background: url(../images/gradient.gif);
   background-size: cover;
   -webkit-text-fill-color: transparent;
@@ -383,7 +383,7 @@ li a {
 }
 
 .branding-background img {
-  width: 200px;
+  width: 90px;
 }
 
 .branding-background {
@@ -401,7 +401,8 @@ li a {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 6% 0;
+  margin-top: 5%;
+  margin-bottom: 2%;
 }
 
 .footer-line p {
@@ -414,4 +415,104 @@ li a {
   margin-top: 5px;
   margin: 0 6px;
   padding-top: 4px;
+}
+
+.footer-section {
+  background: #f9f9fa;
+  color: black;
+  padding: 5rem;
+}
+
+.footer-section h3 {
+  text-transform: uppercase;
+  margin-bottom: 30px;
+  font-size: 20px;
+}
+
+.foot-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  justify-content: center;
+  align-items: center;
+}
+
+.foot-grid .col-1 ul {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  text-decoration: none;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.foot-grid .col-1 ul li {
+  padding: 8px 0;
+}
+
+.foot-grid .col-1 ul li a {
+  text-decoration: none;
+  color: black;
+}
+
+/* copyright and social links */
+
+.copyright-social {
+  background: #f9f9fa;
+  color: black;
+  padding: 2rem;
+}
+
+.grid-copy-wrap {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  justify-content: center;
+  align-items: center;
+}
+
+.company-logo img {
+  width: 60px;
+}
+
+.copy-right p {
+  text-align: center;
+  font-size: 1.1rem;
+}
+
+.social-links {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.social-links a {
+  padding: 0 20px;
+}
+
+.fa-brands {
+  font-size: 20px;
+  color: black;
+}
+
+/* icons */
+
+.fa-solid {
+  margin-right: 10px;
+}
+
+.phone-numbers {
+  font-weight: 500;
+  margin-left: 10px;
+}
+
+.address {
+  display: flex;
+}
+
+.address p {
+  margin-left: 8px;
+}
+
+.whatsapp-contact a img {
+  margin-right: 20px;
+  margin-bottom: 20px;
 }
