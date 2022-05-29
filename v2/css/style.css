@@ -192,6 +192,16 @@ li a {
   color: white;
 }
 
+.make-a-call {
+  text-decoration: none;
+  color: white;
+  font-size: 15px;
+}
+
+.icon-color {
+  color: rgb(5, 251, 5);
+}
+
 .txt {
   display: flex;
 }
@@ -370,11 +380,16 @@ li a {
   background-size: cover;
   -webkit-text-fill-color: transparent;
   -webkit-background-clip: text;
-  margin-top: 15%;
-  margin-bottom: 5%;
+}
+
+.branding-background img {
+  width: 200px;
 }
 
 .branding-background {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 100%;
   background: black;
   height: 100%;
@@ -386,7 +401,7 @@ li a {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-bottom: 6%;
+  margin: 6% 0;
 }
 
 .footer-line p {
