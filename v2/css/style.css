@@ -49,7 +49,7 @@ header {
   display: flex;
   align-items: center;
   justify-content: space-around;
-  margin-top: 15px;
+  margin-top: 5px;
 }
 
 .navcol-1 {
@@ -61,6 +61,7 @@ header {
 .navcol-1 a {
   margin: 0;
   padding: 0;
+  padding-top: 12px;
 }
 
 .navcol-1 p {
@@ -69,7 +70,7 @@ header {
 }
 
 .navcol-1 img {
-  width: 300px;
+  width: 360px;
   margin-right: 15px;
 }
 
@@ -93,7 +94,7 @@ li a {
 .gradient-block {
   opacity: 0.6;
   width: 100%;
-  height: 78%;
+  height: 74%;
   transform: skewY(-12deg);
   position: absolute;
   transform-origin: 0;
@@ -151,23 +152,44 @@ li a {
   grid-template-columns: 1fr 1fr;
   justify-content: center;
   align-items: center;
-  margin-bottom: 15%;
-  margin-top: 3%;
+  margin-bottom: 10%;
+  /* margin-top: 1%; */
 }
 
 .text-ar h3 {
   font-size: 4.5rem;
   line-height: 1.1;
-  padding: 10%;
+  padding: 10% 10% 0;
   opacity: 0.8;
   color: #0f1539;
   transform: skewX(0deg);
+}
+
+.text-ar p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  padding: 4% 6% 6% 10%;
 }
 
 .align-center {
   display: block;
   margin-left: auto;
   margin-right: auto;
+}
+
+.vr-weight {
+  font-weight: 500 !important;
+}
+
+.btn {
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  margin-left: 10%;
+  padding: 7px 12px;
+  border-radius: 10px;
+  border: none;
+  background-color: #0a2540;
+  color: white;
 }
 
 .txt {
@@ -207,6 +229,51 @@ li a {
   top: 25px;
 }
 
+/* Brand images section */
+
+.our-clients {
+  margin-top: 6%;
+  margin-bottom: 10%;
+}
+
+.block-1 {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  justify-content: center;
+  align-items: center;
+  margin: 3% 0;
+}
+
+.block-2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  justify-content: center;
+  align-items: center;
+  margin: 2% 12%;
+}
+
+.brand-clients-heading {
+  text-align: center;
+  font-size: 2.5rem;
+  color: #20123a;
+  font-weight: 600;
+  margin-bottom: 3%;
+}
+
+.img-1 img,
+.img-2 img {
+  width: 180px;
+}
+
+.img-4 img,
+.img-5 img {
+  width: 120px;
+}
+
+.img-3 img {
+  height: 145px;
+}
+
 /* Works Section */
 
 .works {
@@ -232,7 +299,8 @@ li a {
   content: "";
   display: block;
   height: 0.3em;
-  left: -0.2em;
+  left: 0.2em;
+  /* left: -0.2em; */
   position: absolute;
   top: calc(100% - 0.15em);
   width: calc(100% + 1em);
@@ -314,14 +382,14 @@ li a {
 
 /* footer */
 
-.footer-line{
+.footer-line {
   display: flex;
   justify-content: center;
   align-items: center;
   margin-bottom: 6%;
 }
 
-.footer-line p{
+.footer-line p {
   font-size: 1.35em;
 }
 
