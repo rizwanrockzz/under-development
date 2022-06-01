@@ -516,3 +516,19 @@ header {
   margin-right: 20px;
   margin-bottom: 20px;
 }
+
+.fa-heart{
+  color: red;
+}
+
+.fa-facebook-f:hover{
+  color: #4267B2;
+}
+
+.fa-instagram:hover{
+  color: red;
+}
+
+.fa-twitter:hover{
+  color: #00acee;
+}
